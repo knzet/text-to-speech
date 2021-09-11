@@ -1,1 +1,1 @@
-T AH0 <eps> T UW1 <eps> T UW1 <eps> B IY0 <eps> B IY1 <eps>
+F R IY1 <eps> CH EH1 D ER0 <eps> CH IY1 Z <eps> M AH0 EH1 V <eps>
