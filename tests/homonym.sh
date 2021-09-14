@@ -1,2 +1,2 @@
-cd ..
-./fst.sh "TO TOO TWO BE BEE"
+#cd ..
+./say.sh "TO TOO TWO BE BEE"
