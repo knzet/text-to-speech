@@ -5,6 +5,8 @@ import sys
 if (len(sys.argv) > 1):
     # print(type(int(sys.argv[1])))
     fadeMs = ((int(sys.argv[1])))
+    print('delay time: %d', fadeMs)
+
 else:
     fadeMs = 150
 # sounds = AudioSegment.from_mp3('assets/EPS.mp3')
@@ -16,11 +18,12 @@ phones = f.read().replace('\n', '').split(' ')
 
 for phone in phones:
     if phone == '<eps>':
-        # print(phone   )
+        print(" ")
         sounds = sounds.append(AudioSegment.from_mp3('assets/EPS.mp3'),
                                crossfade=400)
     else:
-        # print(phone)
+        # print(phone, end=" ")
+        print(phone)
         sound = AudioSegment.from_mp3('assets/' + phone + '.mp3')
         # print(sound.duration_seconds)
         # sounds = sounds + sound
@@ -29,6 +32,6 @@ for phone in phones:
             startFlag = False
         else:
             sounds = sounds.append(sound, crossfade=fadeMs)
-
+# print("")
 sounds.export('tts.mp3', format="mp3")
 play(sounds)
